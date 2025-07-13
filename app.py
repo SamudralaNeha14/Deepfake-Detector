@@ -113,7 +113,7 @@ def main():
                 if result is None:
                     st.error("Could not read the image file.")
                 else:
-                    st.image(result, caption="Processed Image", channels="BGR", use_column_width=True)
+                    st.image(result, caption="Processed Image", channels="BGR", use_container_width=True)
                     st.markdown(f"<h1 style='text-align: center; color: {'green' if is_real else 'red'};'>Final Prediction: {'Real' if is_real else 'Fake'}</h1>", unsafe_allow_html=True)
 
     else:
@@ -129,7 +129,7 @@ def main():
 
                 rows = st.columns(4)
                 for i, (frame, is_frame_real) in enumerate(frames):
-                    rows[i % 4].image(frame, caption=f"Frame {i+1}: {'Real' if is_frame_real else 'Fake'}", channels="BGR", use_column_width=True)
+                    rows[i % 4].image(frame, caption=f"Frame {i+1}: {'Real' if is_frame_real else 'Fake'}", channels="BGR", use_container_width=True)
 
                 final_color = "green" if is_real else "red"
                 final_label = "Real" if is_real else "Fake"

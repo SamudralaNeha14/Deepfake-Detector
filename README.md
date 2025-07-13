@@ -18,3 +18,9 @@ A Streamlit web app to detect deepfakes in images and videos using face and skin
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## 🔗 Live Demo
+
+Click below to try the app:
+
+👉 [NTN Deepfake Detector App](https://ntn-deepfake-detector.streamlit.app/)
